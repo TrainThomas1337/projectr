@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY Gemfile Gemfile.lock ./
 
-# RUN bundle check || bundle install --jobs 4
+RUN bundle check || bundle install --jobs 4
 
 FROM build_base AS build_prod
 
